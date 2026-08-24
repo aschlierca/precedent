@@ -37,14 +37,14 @@ export default function CsvImportModal({ onClose, onImported }) {
     <Modal title="Import LinkedIn connections" onClose={onClose}>
       <div className="space-y-4">
         {status === 'done' ? (
-          <p className="text-sm text-ink-700">
+          <p className="text-sm text-gray-700">
             Imported <strong>{importedCount}</strong> connections. You can close this and refine
             them below.
           </p>
         ) : (
           <>
-            <p className="text-sm text-ink-500">
-              Upload the <code className="bg-ink-100 px-1 py-0.5 rounded">Connections.csv</code>{' '}
+            <p className="text-sm text-gray-500">
+              Upload the <code className="bg-gray-100 px-1 py-0.5 rounded">Connections.csv</code>{' '}
               file from your LinkedIn data export (Settings &rarr; Data privacy &rarr; Get a copy
               of your data).
             </p>
@@ -60,7 +60,7 @@ export default function CsvImportModal({ onClose, onImported }) {
         <div className="flex justify-end gap-2 pt-2">
           <button
             onClick={onClose}
-            className="rounded-md px-4 py-2 text-sm font-medium text-ink-600 hover:bg-ink-100"
+            className="rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
           >
             {status === 'done' ? 'Close' : 'Cancel'}
           </button>
@@ -68,7 +68,7 @@ export default function CsvImportModal({ onClose, onImported }) {
             <button
               onClick={handleUpload}
               disabled={!file || status === 'uploading'}
-              className="rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800 disabled:opacity-60"
+              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
             >
               {status === 'uploading' ? 'Importing…' : 'Import'}
             </button>

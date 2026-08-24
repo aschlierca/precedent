@@ -62,25 +62,25 @@ export default function GroupDetail() {
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-8 space-y-6">
-      <Link to="/groups" className="text-sm text-ink-500 hover:text-ink-800">
+      <Link to="/groups" className="text-sm text-gray-500 hover:text-gray-800">
         &larr; Back to groups
       </Link>
 
       {error && <ErrorBanner message={error} onRetry={load} />}
 
-      <div className="rounded-lg border border-ink-200 bg-white p-6">
+      <div className="rounded-xl border border-gray-200 bg-white p-6">
         {editing ? (
           <GroupForm initialValues={group} onSubmit={handleUpdate} onCancel={() => setEditing(false)} />
         ) : (
           <div className="flex items-start justify-between">
             <div>
-              <h1 className="text-2xl font-semibold text-ink-900">{group.name}</h1>
-              {group.description && <p className="text-ink-600">{group.description}</p>}
+              <h1 className="text-2xl font-semibold text-gray-900">{group.name}</h1>
+              {group.description && <p className="text-gray-600">{group.description}</p>}
             </div>
             <div className="flex shrink-0 gap-2">
               <button
                 onClick={() => setEditing(true)}
-                className="rounded-md border border-ink-300 px-3 py-1.5 text-sm text-ink-700 hover:bg-ink-100"
+                className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
               >
                 Edit
               </button>
@@ -95,28 +95,28 @@ export default function GroupDetail() {
         )}
       </div>
 
-      <div className="rounded-lg border border-ink-200 bg-white p-6">
+      <div className="rounded-xl border border-gray-200 bg-white p-6">
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-ink-900">Members ({members.length})</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Members ({members.length})</h2>
           <button
             onClick={() => setManagingMembers(true)}
-            className="text-sm font-medium text-ink-700 hover:text-ink-900"
+            className="text-sm font-medium text-gray-700 hover:text-gray-900"
           >
             Manage members
           </button>
         </div>
         {members.length === 0 ? (
-          <p className="text-sm text-ink-500">No members yet. Add some to generate an insight.</p>
+          <p className="text-sm text-gray-500">No members yet. Add some to generate an insight.</p>
         ) : (
           <ul className="space-y-1">
             {members.map((contact) => (
               <li key={contact.id}>
                 <Link
                   to={`/contacts/${contact.id}`}
-                  className="block rounded-md px-2 py-1.5 text-sm text-ink-800 hover:bg-ink-100"
+                  className="block rounded-md px-2 py-1.5 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   {contact.firstName} {contact.lastName}
-                  <span className="text-ink-400"> · {contact.currentTitle || 'No title'}</span>
+                  <span className="text-gray-400"> · {contact.currentTitle || 'No title'}</span>
                 </Link>
               </li>
             ))}

@@ -53,19 +53,19 @@ export default function Dashboard() {
     <div className="mx-auto max-w-5xl px-6 py-8">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-ink-900">Contacts</h1>
-          <p className="text-ink-500">{contacts.length} people in your network</p>
+          <h1 className="text-2xl font-semibold text-gray-900">Contacts</h1>
+          <p className="text-gray-500">{contacts.length} people in your network</p>
         </div>
         <div className="flex gap-2">
           <button
             onClick={() => setShowImport(true)}
-            className="rounded-md border border-ink-300 px-4 py-2 text-sm font-medium text-ink-700 hover:bg-ink-100"
+            className="rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
           >
             Import LinkedIn CSV
           </button>
           <button
             onClick={() => setShowAddForm(true)}
-            className="rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800"
+            className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
           >
             Add contact
           </button>
@@ -77,7 +77,7 @@ export default function Dashboard() {
       {loading ? (
         <LoadingSpinner label="Loading contacts…" />
       ) : contacts.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-ink-300 py-16 text-center text-ink-500">
+        <div className="rounded-lg border border-dashed border-gray-300 py-16 text-center text-gray-500">
           No contacts yet. Import your LinkedIn connections or add one manually to get started.
         </div>
       ) : (

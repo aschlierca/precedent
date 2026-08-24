@@ -9,7 +9,7 @@ import GroupDetail from './pages/GroupDetail';
 
 function AuthenticatedLayout({ children }) {
   return (
-    <div className="min-h-screen bg-ink-50">
+    <div className="min-h-screen bg-offwhite">
       <Navbar />
       {children}
     </div>

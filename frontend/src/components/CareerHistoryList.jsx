@@ -1,6 +1,6 @@
 export default function CareerHistoryList({ entries, onDelete }) {
   if (entries.length === 0) {
-    return <p className="text-sm text-ink-500">No career history recorded yet.</p>;
+    return <p className="text-sm text-gray-500">No career history recorded yet.</p>;
   }
 
   return (
@@ -8,17 +8,17 @@ export default function CareerHistoryList({ entries, onDelete }) {
       {entries.map((entry) => (
         <li
           key={entry.id}
-          className="flex items-start justify-between rounded-md border border-ink-200 bg-white px-3 py-2"
+          className="flex items-start justify-between rounded-md border border-gray-200 bg-white px-3 py-2"
         >
           <div>
-            <p className="text-sm font-medium text-ink-900">{entry.title}</p>
-            <p className="text-sm text-ink-500">
+            <p className="text-sm font-medium text-gray-900">{entry.title}</p>
+            <p className="text-sm text-gray-500">
               {entry.company} · {entry.startDate || '?'} – {entry.endDate || 'present'}
             </p>
           </div>
           <button
             onClick={() => onDelete(entry)}
-            className="shrink-0 text-sm text-ink-400 hover:text-red-600"
+            className="shrink-0 text-sm text-gray-400 hover:text-red-600"
           >
             Remove
           </button>

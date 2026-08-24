@@ -12,7 +12,7 @@ const emptyForm = {
 };
 
 const fieldClasses =
-  'w-full rounded-md border border-ink-200 px-3 py-2 text-sm focus:border-ink-500 focus:outline-none focus:ring-1 focus:ring-ink-500';
+  'w-full rounded-md border border-gray-200 px-3 py-2 text-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500';
 
 export default function ContactForm({ initialValues, onSubmit, onCancel }) {
   const [form, setForm] = useState({ ...emptyForm, ...initialValues });
@@ -39,7 +39,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
       {error && <ErrorBanner message={error} />}
       <div className="grid grid-cols-2 gap-3">
         <div>
-          <label className="mb-1 block text-xs font-medium text-ink-600">First name</label>
+          <label className="mb-1 block text-xs font-medium text-gray-600">First name</label>
           <input
             required
             name="firstName"
@@ -49,7 +49,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
           />
         </div>
         <div>
-          <label className="mb-1 block text-xs font-medium text-ink-600">Last name</label>
+          <label className="mb-1 block text-xs font-medium text-gray-600">Last name</label>
           <input
             required
             name="lastName"
@@ -60,7 +60,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         </div>
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-ink-600">Current title</label>
+        <label className="mb-1 block text-xs font-medium text-gray-600">Current title</label>
         <input
           name="currentTitle"
           value={form.currentTitle}
@@ -69,7 +69,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         />
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-ink-600">Current company</label>
+        <label className="mb-1 block text-xs font-medium text-gray-600">Current company</label>
         <input
           name="currentCompany"
           value={form.currentCompany}
@@ -78,7 +78,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         />
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-ink-600">LinkedIn URL</label>
+        <label className="mb-1 block text-xs font-medium text-gray-600">LinkedIn URL</label>
         <input
           name="linkedinUrl"
           value={form.linkedinUrl}
@@ -87,7 +87,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         />
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-ink-600">Connected on</label>
+        <label className="mb-1 block text-xs font-medium text-gray-600">Connected on</label>
         <input
           type="date"
           name="connectedOn"
@@ -97,7 +97,7 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         />
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-ink-600">Notes</label>
+        <label className="mb-1 block text-xs font-medium text-gray-600">Notes</label>
         <textarea
           name="notes"
           value={form.notes || ''}
@@ -110,14 +110,14 @@ export default function ContactForm({ initialValues, onSubmit, onCancel }) {
         <button
           type="button"
           onClick={onCancel}
-          className="rounded-md px-4 py-2 text-sm font-medium text-ink-600 hover:bg-ink-100"
+          className="rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
         >
           Cancel
         </button>
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800 disabled:opacity-60"
+          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
         >
           {submitting ? 'Saving…' : 'Save'}
         </button>

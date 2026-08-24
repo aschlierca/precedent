@@ -10,14 +10,14 @@ const isConfigured =
 
 function NotConfiguredScreen() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-ink-50 px-6">
+    <div className="min-h-screen flex items-center justify-center bg-offwhite px-6">
       <div className="max-w-md text-center space-y-3">
-        <h1 className="text-2xl font-semibold text-ink-900">Auth0 isn't configured yet</h1>
-        <p className="text-ink-600">
-          Set <code className="bg-ink-100 px-1 py-0.5 rounded">VITE_AUTH0_DOMAIN</code> and{' '}
-          <code className="bg-ink-100 px-1 py-0.5 rounded">VITE_AUTH0_CLIENT_ID</code> in a{' '}
-          <code className="bg-ink-100 px-1 py-0.5 rounded">.env</code> file (see{' '}
-          <code className="bg-ink-100 px-1 py-0.5 rounded">.env.example</code>) to enable login.
+        <h1 className="text-2xl font-semibold text-gray-900">Auth0 isn't configured yet</h1>
+        <p className="text-gray-600">
+          Set <code className="bg-gray-100 px-1 py-0.5 rounded">VITE_AUTH0_DOMAIN</code> and{' '}
+          <code className="bg-gray-100 px-1 py-0.5 rounded">VITE_AUTH0_CLIENT_ID</code> in a{' '}
+          <code className="bg-gray-100 px-1 py-0.5 rounded">.env</code> file (see{' '}
+          <code className="bg-gray-100 px-1 py-0.5 rounded">.env.example</code>) to enable login.
         </p>
       </div>
     </div>

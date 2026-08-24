@@ -42,14 +42,14 @@ export default function InsightPanel({ groupId, memberCount }) {
   };
 
   return (
-    <div className="rounded-lg border border-ink-200 bg-white p-6">
+    <div className="rounded-xl border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-ink-900">AI Group Insight</h2>
+        <h2 className="text-lg font-semibold text-gray-900">AI Group Insight</h2>
         <button
           onClick={handleGenerate}
           disabled={generating || memberCount === 0}
           title={memberCount === 0 ? 'Add contacts to this group first' : undefined}
-          className="rounded-md bg-amber-500 px-4 py-2 text-sm font-medium text-white hover:bg-amber-600 disabled:opacity-50"
+          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
         >
           {generating ? 'Generating…' : insight ? 'Regenerate' : 'Generate insight'}
         </button>
@@ -63,17 +63,17 @@ export default function InsightPanel({ groupId, memberCount }) {
         <LoadingSpinner label="AI is analyzing this group's career patterns…" />
       ) : insight ? (
         <div className="space-y-4">
-          <p className="text-ink-700">{insight.summaryText}</p>
+          <p className="text-gray-700">{insight.summaryText}</p>
           {insight.suggestedRoles?.length > 0 && (
             <div>
-              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-ink-500">
+              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">
                 Suggested titles to search for
               </h3>
               <div className="flex flex-wrap gap-2">
                 {insight.suggestedRoles.map((role) => (
                   <span
                     key={role}
-                    className="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800"
+                    className="rounded-full bg-teal-100 px-3 py-1 text-sm text-teal-800"
                   >
                     {role}
                   </span>
@@ -81,7 +81,7 @@ export default function InsightPanel({ groupId, memberCount }) {
               </div>
             </div>
           )}
-          <p className="text-xs text-ink-400">
+          <p className="text-xs text-gray-400">
             Generated {new Date(insight.generatedAt).toLocaleString()}
           </p>
         </div>

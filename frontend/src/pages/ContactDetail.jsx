@@ -76,13 +76,13 @@ export default function ContactDetail() {
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-8 space-y-6">
-      <Link to="/dashboard" className="text-sm text-ink-500 hover:text-ink-800">
+      <Link to="/dashboard" className="text-sm text-gray-500 hover:text-gray-800">
         &larr; Back to contacts
       </Link>
 
       {error && <ErrorBanner message={error} onRetry={load} />}
 
-      <div className="rounded-lg border border-ink-200 bg-white p-6">
+      <div className="rounded-xl border border-gray-200 bg-white p-6">
         {editing ? (
           <ContactForm
             initialValues={contact}
@@ -92,10 +92,10 @@ export default function ContactDetail() {
         ) : (
           <div className="flex items-start justify-between">
             <div>
-              <h1 className="text-2xl font-semibold text-ink-900">
+              <h1 className="text-2xl font-semibold text-gray-900">
                 {contact.firstName} {contact.lastName}
               </h1>
-              <p className="text-ink-600">
+              <p className="text-gray-600">
                 {contact.currentTitle || 'No title'}
                 {contact.currentCompany ? ` at ${contact.currentCompany}` : ''}
               </p>
@@ -104,17 +104,17 @@ export default function ContactDetail() {
                   href={contact.linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-amber-600 hover:underline"
+                  className="text-sm text-blue-600 hover:underline"
                 >
                   LinkedIn profile
                 </a>
               )}
-              {contact.notes && <p className="mt-2 text-sm text-ink-500">{contact.notes}</p>}
+              {contact.notes && <p className="mt-2 text-sm text-gray-500">{contact.notes}</p>}
             </div>
             <div className="flex shrink-0 gap-2">
               <button
                 onClick={() => setEditing(true)}
-                className="rounded-md border border-ink-300 px-3 py-1.5 text-sm text-ink-700 hover:bg-ink-100"
+                className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
               >
                 Edit
               </button>
@@ -129,13 +129,13 @@ export default function ContactDetail() {
         )}
       </div>
 
-      <div className="rounded-lg border border-ink-200 bg-white p-6">
+      <div className="rounded-xl border border-gray-200 bg-white p-6">
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-ink-900">Career history</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Career history</h2>
           {!addingHistory && (
             <button
               onClick={() => setAddingHistory(true)}
-              className="text-sm font-medium text-ink-700 hover:text-ink-900"
+              className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
               + Add entry
             </button>

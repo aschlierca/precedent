@@ -41,12 +41,12 @@ export default function Groups() {
     <div className="mx-auto max-w-5xl px-6 py-8">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-ink-900">Groups</h1>
-          <p className="text-ink-500">Organize your network to see the patterns inside it.</p>
+          <h1 className="text-2xl font-semibold text-gray-900">Groups</h1>
+          <p className="text-gray-500">Organize your network to see the patterns inside it.</p>
         </div>
         <button
           onClick={() => setShowForm(true)}
-          className="rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800"
+          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
         >
           New group
         </button>
@@ -57,7 +57,7 @@ export default function Groups() {
       {loading ? (
         <LoadingSpinner label="Loading groups…" />
       ) : groups.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-ink-300 py-16 text-center text-ink-500">
+        <div className="rounded-lg border border-dashed border-gray-300 py-16 text-center text-gray-500">
           No groups yet. Create one (e.g. "UX people," "Grad school friends") to start grouping
           your contacts.
         </div>

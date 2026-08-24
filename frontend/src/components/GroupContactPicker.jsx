@@ -58,12 +58,12 @@ export default function GroupContactPicker({ groupId, memberIds, onClose, onChan
       {loading ? (
         <LoadingSpinner label="Loading contacts…" />
       ) : allContacts.length === 0 ? (
-        <p className="text-sm text-ink-500">You don't have any contacts yet.</p>
+        <p className="text-sm text-gray-500">You don't have any contacts yet.</p>
       ) : (
         <ul className="max-h-80 space-y-1 overflow-y-auto">
           {allContacts.map((contact) => (
             <li key={contact.id}>
-              <label className="flex cursor-pointer items-center gap-3 rounded-md px-2 py-1.5 hover:bg-ink-100">
+              <label className="flex cursor-pointer items-center gap-3 rounded-md px-2 py-1.5 hover:bg-gray-100">
                 <input
                   type="checkbox"
                   checked={selected.has(contact.id)}
@@ -71,9 +71,9 @@ export default function GroupContactPicker({ groupId, memberIds, onClose, onChan
                   onChange={() => toggle(contact)}
                   className="h-4 w-4"
                 />
-                <span className="text-sm text-ink-800">
+                <span className="text-sm text-gray-800">
                   {contact.firstName} {contact.lastName}
-                  <span className="text-ink-400"> · {contact.currentTitle || 'No title'}</span>
+                  <span className="text-gray-400"> · {contact.currentTitle || 'No title'}</span>
                 </span>
               </label>
             </li>
@@ -83,7 +83,7 @@ export default function GroupContactPicker({ groupId, memberIds, onClose, onChan
       <div className="mt-4 flex justify-end">
         <button
           onClick={onClose}
-          className="rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800"
+          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
         >
           Done
         </button>
