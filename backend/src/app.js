@@ -15,7 +15,10 @@ if (process.env.AUTH_BYPASS === 'true' && process.env.NODE_ENV === 'production')
 
 const app = express();
 
-app.use(cors({ origin: process.env.FRONTEND_ORIGIN || 'http://localhost:5173' }));
+const allowedOrigins = (process.env.FRONTEND_ORIGIN || 'http://localhost:5173')
+  .split(',')
+  .map((origin) => origin.trim());
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
