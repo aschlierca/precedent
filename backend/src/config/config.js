@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const base = {
   dialect: 'postgres',
+  dialectModule: require('pg'),
   logging: false,
 };
 
