@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand tokens — the numbered scales (gray/blue/teal/amber/red) are Tailwind's
+     built-in defaults, which happen to match the spec's hex values exactly. */
+  --color-offwhite: #f7f7f3;
+  --color-coolgray: #d9dde3;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  color: var(--color-gray-900);
+}
