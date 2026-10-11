@@ -1,4 +1,4 @@
-const { parseLinkedInCsv } = require('../src/services/csvImportService');
+const { parseLinkedInCsv } = require('../../src/services/csvImportService');
 
 describe('parseLinkedInCsv', () => {
   it('strips the LinkedIn export preamble and parses rows', () => {

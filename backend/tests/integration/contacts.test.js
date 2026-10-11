@@ -1,8 +1,8 @@
 process.env.AUTH_BYPASS = 'true';
 
 const request = require('supertest');
-const app = require('../src/app');
-const { sequelize, Contact, Group, GroupInsight, CareerHistoryEntry, ContactGroup } = require('../src/models');
+const app = require('../../src/app');
+const { sequelize, Contact, Group, GroupInsight, CareerHistoryEntry, ContactGroup } = require('../../src/models');
 
 beforeAll(async () => {
   await sequelize.sync({ force: true });

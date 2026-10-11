@@ -8,7 +8,7 @@ jest.mock('@google/genai', () => {
   };
 });
 
-const { generateGroupInsight } = require('../src/services/aiService');
+const { generateGroupInsight } = require('../../src/services/aiService');
 
 describe('generateGroupInsight', () => {
   beforeEach(() => {

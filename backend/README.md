@@ -34,10 +34,33 @@ See `.env.example` for the full list. Notable ones:
 
 - `npm run dev` — start with nodemon
 - `npm start` — start for production
-- `npm test` — run the Jest test suite (uses `TEST_DATABASE_URL`, syncs schema, no live AI calls — the Gemini client is mocked)
+- `npm test` — run the whole Jest suite
+- `npm run test:unit` — run only the tests in `tests/unit` (CSV parsing, AI response handling). No database needed; the Gemini client is mocked, so no live AI calls
+- `npm run test:integration` — run the API tests in `tests/integration` against `TEST_DATABASE_URL`. **These drop and recreate every table in that database**, so point it at a throwaway database
 - `npm run db:migrate` / `db:migrate:undo` — run/undo migrations
 - `npm run db:seed` / `db:seed:undo` — seed/unseed demo data
 - `npm run db:reset` — drop, recreate, and reseed
+
+## Structure
+
+```
+backend/
+├── server.js            entry point (also exported for Vercel)
+├── src/
+│   ├── app.js           Express app: middleware and route mounting
+│   ├── config/          database configuration per environment
+│   ├── controllers/     request handlers
+│   ├── db/
+│   │   ├── migrations/  schema migrations (sequelize-cli)
+│   │   └── seeders/     demo data
+│   ├── middleware/      auth, async wrapper, error handling
+│   ├── models/          Sequelize models and associations
+│   ├── routes/          route definitions
+│   └── services/        Gemini insight generation, LinkedIn CSV parsing
+└── tests/
+    ├── unit/            no database required
+    └── integration/     API tests against a test database
+```
 
 ## API
 
