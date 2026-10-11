@@ -1,9 +1,12 @@
 node_modules/
-.env
-.env.local
-npm-debug.log*
 coverage/
-.DS_Store
-*.log
-.vercel
+
+# Environment files (keep the template)
 .env*
+!.env.example
+
+# Vercel project link
+.vercel
+
+*.log
+.DS_Store
