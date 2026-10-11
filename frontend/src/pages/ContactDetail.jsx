@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import useApi from '../hooks/useApi';
 import { getErrorMessage } from '../api/errors';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBanner from '../components/ErrorBanner';
-import ContactForm from '../components/ContactForm';
-import CareerHistoryList from '../components/CareerHistoryList';
-import CareerHistoryForm from '../components/CareerHistoryForm';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import ErrorBanner from '../components/common/ErrorBanner';
+import ContactForm from '../components/contacts/ContactForm';
+import CareerHistoryList from '../components/contacts/CareerHistoryList';
+import CareerHistoryForm from '../components/contacts/CareerHistoryForm';
 
 export default function ContactDetail() {
   const { id } = useParams();

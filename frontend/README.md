@@ -26,10 +26,18 @@ Without real values in `.env`, the app shows a friendly "Auth0 isn't configured 
 
 ## Structure
 
-- `src/auth/` — Auth0 provider setup
-- `src/api/` — axios client + error formatting
-- `src/hooks/useApi.js` — attaches a fresh Auth0 access token to every backend request
-- `src/pages/` — routed pages (Login, Dashboard, ContactDetail, Groups, GroupDetail)
-- `src/components/` — forms, cards, modals, the Group Insight panel, loading/error UI
+```
+src/
+├── api/                 axios client and error formatting
+├── auth/                Auth0 provider and the protected-route guard
+├── components/
+│   ├── common/          shared UI: navbar, logo, modal, spinner, error banner
+│   ├── contacts/        contact cards and forms, career history, CSV import
+│   └── groups/          group cards and forms, member picker, AI insight panel
+├── hooks/               useApi, which attaches a fresh Auth0 access token to every request
+├── pages/               routed pages: Login, Dashboard, ContactDetail, Groups, GroupDetail
+├── App.jsx              route table
+└── main.jsx             entry point
+```
 
 Every async action (CSV import, all CRUD, insight generation) has an explicit loading state and a dismissible/retry-able error banner.

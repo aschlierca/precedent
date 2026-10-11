@@ -1,7 +1,7 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { Navigate } from 'react-router-dom';
-import Logo from '../components/Logo';
-import CareerMapBackdrop from '../components/CareerMapBackdrop';
+import Logo from '../components/common/Logo';
+import CareerMapBackdrop from '../components/common/CareerMapBackdrop';
 
 export default function Login() {
   const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();

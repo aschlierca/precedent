@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ErrorBanner from './ErrorBanner';
+import ErrorBanner from '../common/ErrorBanner';
 
 const emptyForm = {
   firstName: '',

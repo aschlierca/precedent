@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import useApi from '../hooks/useApi';
 import { getErrorMessage } from '../api/errors';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBanner from '../components/ErrorBanner';
-import GroupForm from '../components/GroupForm';
-import GroupContactPicker from '../components/GroupContactPicker';
-import InsightPanel from '../components/InsightPanel';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import ErrorBanner from '../components/common/ErrorBanner';
+import GroupForm from '../components/groups/GroupForm';
+import GroupContactPicker from '../components/groups/GroupContactPicker';
+import InsightPanel from '../components/groups/InsightPanel';
 
 export default function GroupDetail() {
   const { id } = useParams();

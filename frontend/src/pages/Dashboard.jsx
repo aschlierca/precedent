@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import useApi from '../hooks/useApi';
 import { getErrorMessage } from '../api/errors';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBanner from '../components/ErrorBanner';
-import ContactCard from '../components/ContactCard';
-import ContactForm from '../components/ContactForm';
-import CsvImportModal from '../components/CsvImportModal';
-import Modal from '../components/Modal';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import ErrorBanner from '../components/common/ErrorBanner';
+import ContactCard from '../components/contacts/ContactCard';
+import ContactForm from '../components/contacts/ContactForm';
+import CsvImportModal from '../components/contacts/CsvImportModal';
+import Modal from '../components/common/Modal';
 
 export default function Dashboard() {
   const request = useApi();

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Modal from './Modal';
-import ErrorBanner from './ErrorBanner';
-import LoadingSpinner from './LoadingSpinner';
-import useApi from '../hooks/useApi';
-import { getErrorMessage } from '../api/errors';
+import Modal from '../common/Modal';
+import ErrorBanner from '../common/ErrorBanner';
+import LoadingSpinner from '../common/LoadingSpinner';
+import useApi from '../../hooks/useApi';
+import { getErrorMessage } from '../../api/errors';
 
 export default function GroupContactPicker({ groupId, memberIds, onClose, onChange }) {
   const request = useApi();

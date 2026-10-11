@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import useApi from '../hooks/useApi';
 import { getErrorMessage } from '../api/errors';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBanner from '../components/ErrorBanner';
-import GroupCard from '../components/GroupCard';
-import GroupForm from '../components/GroupForm';
-import Modal from '../components/Modal';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import ErrorBanner from '../components/common/ErrorBanner';
+import GroupCard from '../components/groups/GroupCard';
+import GroupForm from '../components/groups/GroupForm';
+import Modal from '../components/common/Modal';
 
 export default function Groups() {
   const request = useApi();

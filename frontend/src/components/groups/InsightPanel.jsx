@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
-import useApi from '../hooks/useApi';
-import { getErrorMessage } from '../api/errors';
-import LoadingSpinner from './LoadingSpinner';
-import ErrorBanner from './ErrorBanner';
+import useApi from '../../hooks/useApi';
+import { getErrorMessage } from '../../api/errors';
+import LoadingSpinner from '../common/LoadingSpinner';
+import ErrorBanner from '../common/ErrorBanner';
 
 export default function InsightPanel({ groupId, memberCount }) {
   const request = useApi();

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { withAuthenticationRequired } from '@auth0/auth0-react';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../components/common/LoadingSpinner';
 
 export default function ProtectedRoute({ component }) {
   const Component = useMemo(
