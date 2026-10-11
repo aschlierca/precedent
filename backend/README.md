@@ -1,6 +1,6 @@
 # Precedent — Backend
 
-Express + Sequelize/Postgres API for Precedent (see the root `PRD.md`). Owns all data access, LinkedIn CSV import, Auth0 token verification, and the server-side call to the Gemini API for AI Group Insights.
+Express + Sequelize/Postgres API for Precedent (see the [root README](../README.md)). Owns all data access, LinkedIn CSV import, Auth0 token verification, and the server-side call to the Gemini API for AI Group Insights.
 
 ## Stack
 

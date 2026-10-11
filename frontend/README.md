@@ -1,6 +1,6 @@
 # Precedent — Frontend
 
-React + Vite frontend for Precedent (see the root `PRD.md`). Auth0 login, LinkedIn CSV import, contact/group management, and the AI Group Insight panel.
+React + Vite frontend for Precedent (see the [root README](../README.md)). Auth0 login, LinkedIn CSV import, contact/group management, and the AI Group Insight panel.
 
 ## Stack
 
